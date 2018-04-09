@@ -1,0 +1,289 @@
+/* Core Styles */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+  
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 1em 0;
+}
+
+p {
+    margin: 0;
+    padding: 1em 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #ffa64d;
+}
+
+.btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 2em;
+    border: 1px solid #666;
+    margin: 0.5em 0;
+}
+
+.btn:hover {
+    background: #ffa64d;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header Showcase */
+
+#showcase {
+    min-height: 450px;
+    color: #fff;
+    text-align: center;
+}
+
+#showcase .bg-image {
+    position: absolute;
+    background: #333 url("https://i.ytimg.com/vi/G_xZQOMmamk/maxresdefault.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 500px;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#showcase h1 {
+    padding-top: 40px;
+    padding-bottom: 0;
+    color: #ffa64d;
+}
+
+#showcase .content-wrap,
+#section-a .content-wrap {
+    padding: 0 1.5em;
+}
+
+/* Section A */
+
+#section-a {
+    background: #eaeaea;
+    color: #333;
+    padding-bottom: 2em;
+}
+
+.training-table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.training-table caption {
+    text-align: left;
+}
+
+.training-table td, .training-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.training-table tr:nth-child(even){background-color: #f2f2f2;}
+
+.training-table tr:hover {background-color: #ddd;}
+
+.training-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #ffa64d;
+    color: white;
+}
+
+/* Section B */
+
+#section-b {
+    padding: 2em;
+    color: #fff;
+    background: #ffa64d;
+}
+
+#section-b iframe{
+    width: 100%;
+    height: auto;
+}
+
+/* Section C */
+
+#section-c {
+    padding: 2em 1em 1em;
+}
+  
+#section-c ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+#section-c li {
+    margin-bottom: 1em;
+    background: #fff;
+    color: #333;
+}
+
+#section-c img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5em;
+}
+
+/* Section D */
+
+#section-d {
+    background: #fff;
+    color: #333;
+    padding: 2em;
+}
+
+/* Section Facebook */
+
+#section-facebook {
+    background: #E8EAED;
+    padding-top: 20px;
+}
+
+/* Section E / Boxes */
+
+#section-e .box {
+    padding: 2em;
+    color: #fff;
+}
+  
+#section-e .box:nth-child(2) {
+    color: #333;
+    background: #fff;
+}
+
+.contact-table, .contact-table a {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color: #333;
+}
+
+.contact-table caption {
+    text-align: left;
+}
+
+.contact-table td, .contact-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.contact-table tr {background-color: #eaeaea;}
+
+.contact-table tr:nth-child(even){background-color: #f2f2f2;}
+
+.contact-table tr:hover {background-color: #ddd;}
+
+.contact-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Footer */
+
+#main-footer {
+    padding: 2em;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+  
+#main-footer a {
+    color: #ffa64d;
+    text-decoration: none;
+}
+
+/* Media Queries */
+
+@media (min-width: 700px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+    
+    #showcase h1 {
+        padding-top: 100px;
+    }
+
+    #section-a .content-text {
+        columns: 2 2;
+        column-gap: 2em;
+    }
+
+    #section-a .content-text p {
+        padding-top: 0;
+    }
+
+    #section-b .content-text {
+        columns: 2 2;
+    }
+
+    .content-wrap,
+    #section-c ul {
+        grid-column: 2/4;
+    }
+
+    .box,
+    #main-footer div {
+        grid-column: span 2;
+    }
+
+    #section-c ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #section-c li {
+        width: 45%;
+    }
+
+    #section-c img {
+        height: 300px;
+        object-fit: cover;
+    }
+
+    #section-facebook iframe {
+        grid-column: 2/4;
+    }
+}
+  
