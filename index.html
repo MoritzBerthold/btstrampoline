@@ -1,129 +1,248 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="utf-8">
 
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Use title if it's in the page YAML frontmatter -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheets/default.css">
     <title>Trampolinturnen im BTS</title>
+</head>
 
-    <link href="stylesheets/normalize.css" rel="stylesheet" type="text/css" />
-    <link href="stylesheets/all.css" rel="stylesheet" type="text/css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="javascripts/all.js"></script>
+<body>
+    <!-- Header Showcase -->
+    <header id="showcase" class="grid">
+        <div class="bg-image"></div>
+        <div class="content-wrap">
+            <h1>Willkommen bei der Trampolinabteilung des BTS</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci eum error earum soluta voluptatum nisi laboriosam
+                eos saepe asperiores dolorum.</p>
+            <a href="new_post.php" class="btn">Create new post</a>
+        </div>
+    </header>
 
-    <link href="http://www.bayreuther-turnerschaft.de/Hauptverein_Stand_2011_11_22/00%20hauptverein%20-%20images/Internet_Logo_Hauptverein.bmp" rel="icon" type="image/bmp" />
-
-  </head>
-  <!--?php 
-    $pdo = new PDO('mysql:host=localhost;dbname=btstrampoline', 'root', '');
-    $pdo->query("SET NAMES 'utf8'");
-  ?-->
-  <body>
-    <div class="header">
-      <a href="#">Home</a>
-      <a href="#news">Aktuelles</a>
-      <a href="#dates">Termine</a>
-      <a href="#team">Team</a>
-      <a href="#gallery">Gallerie</a>
-      <a href="#contact">Kontakt</a>
-    </div>
-    <div class="banner"></div>
-
-    <div class="content">
-      <section id="news">
-        <h1 class="title">Aktuelles</h1>
-        
-        <div class="post-container">
-          <div class="post">
-            <div class="post-content">
-              <h1>Bayreuther Trampoliner dominieren erneut im Turnbezirk</h1>
-              <p>
-                  Unsere Trampoliner erzielten vergangenes Wochenende 4 von 5 möglichen Podestplätzen bei den Oberfränkischen Vereinsmannschaftsmeisterschaften und dem erstmals ausgeschriebenen Oldies Cup.<br/>
-                  <br/>
-                  Unsere erste Mannschaft (bestehend aus Lisa, Joris, Louis, Sidney & Aurelia) gewann den Mannschaftswettkampf mit 2 Punkten Vorsprung vor dem TSV 08 Kulmbach. Unsere Mannschaft 2 (Sebastian, Rawand, Laura, Max & Moritz) kamen auf Rang 3.<br/>
-                  Das Finale der besten fünf Mannschaften verpassten unsere Springer der dritten Mannschaft (Lea, Lukas, Sanchez & Josi) leider und wurden Siebter.<br/>
-                  Beim Oldies Cup siegte Bernd mit deutlichem Vorsprung vor Horst aus Burgkunstadt. Bei den Damen schaffte unsere Steffi als Dritte den Sprung aufs Podest.
-              </p>
-            </div>
-            <img class="post-picture" src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/29214162_1306587336151424_288514282079911936_n.jpg?_nc_cat=0&oh=b27d7382f80742937e4131bfa7900b28&oe=5B3A9DB5"/>
-          </div>
-          <!--?php 
-            $sql = "SELECT `beitraege`.`titel`, `beitraege`.`inhalt`, `beitraege`.`bilder` FROM `beitraege`";
-            $result = $pdo->query($sql);
-            foreach ($result as $row){
-              echo '
-              <div class="post">
-                <div class="post-content">
-                  <h1>' . $row['titel'] . '</h1>
-                  <p>';
-              $lines = explode("\n", $row['inhalt']);
-              foreach ($lines as $line){
-                echo $line . '<br/>';
-              }
-              echo '</p>
+    <!-- Main Area -->
+    <main id="main">
+        <!-- Section A -->
+        <section id="section-a" class="grid">
+            <div class="content-wrap">
+                <h2 class="content-title">Regelmäßige Trainingszeiten</h2>
+                <p>Nur nach Absprache und Voranmeldung über die BTS-Geschäftsstelle <br> <a href="tel:(0921) 42059">&phone; (0921) 42059</a></p>
+                <div class="content-text">
+                    <table id="training-regular" class="training-table">
+                        <caption>Regulär - <a href="#sportzentrum">Sportzentrum - Halle 1</a></caption>
+                        <thead>
+                            <th>Tag</th>
+                            <th>Gruppe</th>
+                            <th>Beginn</th>
+                            <th>Ende</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mo</td>
+                                <td>Wettkampf</td>
+                                <td>17:15</td>
+                                <td>19:30</td>
+                            </tr>
+                            <tr>
+                                <td>Do</td>
+                                <td>Kader</td>
+                                <td>17:30</td>
+                                <td>19:30</td>
+                            </tr>
+                            <tr>
+                                <td>Fr</td>
+                                <td>Allgemein</td>
+                                <td>15:45</td>
+                                <td>17:30</td>
+                            </tr>
+                            <tr>
+                                <td>Fr</td>
+                                <td>Wettkampf</td>
+                                <td>15:45</td>
+                                <td>19:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table id="training-summer" class="training-table">
+                        <caption>Sommer - <a href="#tennishalle">Tennishalle</a></caption>
+                        <thead>
+                            <th>Tag</th>
+                            <th>Gruppe</th>
+                            <th>Beginn</th>
+                            <th>Ende</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mo</td>
+                                <td>Allgemein</td>
+                                <td>18:00</td>
+                                <td>20:00</td>
+                            </tr>
+                            <tr>
+                                <td>Fr</td>
+                                <td>Allgemein</td>
+                                <td>16:00</td>
+                                <td>18:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <img class="post-picture" src="' . $row['bilder'] . '">
-              </div>';
-            }
-          ?-->
-        </div>
-      </section>
-
-      <section id="dates">
-        <h1 class="title">Termine</h1>
-        <div class="date-container">
-  
-        </div>
-      </section>
-
-      <section id="team">
-        <h1 class="title">Team</h1>
-        <div class="team-container">
-          <div class="profile">
-            <div class="profile-desc">
-              <ul>
-                <li>Name:</li><li>Moritz Berthold</li>
-                <li>Alter:</li><li>23</li>
-                <li>Mitglied seit:</li><li>Mai 2016</li>
-              </ul>
             </div>
-            <img class="profile-img" src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/16387293_1258628007548263_5609598544495767844_n.jpg?_nc_cat=0&oh=c93f67c5e1970f76ffdd02d2c3a93c24&oe=5B71C481">
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="gallery">
-        <h1 class="title">Gallerie</h1>
-        <div class="media-container">
-          <div><iframe class="media-item" src="https://www.youtube.com/embed/iVpuYzLQRgA?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-          <div><iframe class="media-item" src="https://www.youtube.com/embed/sbQepwvKV-s?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-          <div><iframe class="media-item" src="https://www.youtube.com/embed/uGU5G5j_soI?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-          <div><img class="media-item" src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/16387293_1258628007548263_5609598544495767844_n.jpg?_nc_cat=0&oh=c93f67c5e1970f76ffdd02d2c3a93c24&oe=5B71C481" /></div>
-          <div><iframe class="media-item" src="https://www.youtube.com/embed/iVpuYzLQRgA?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-          <div><iframe class="media-item" src="https://www.youtube.com/embed/sbQepwvKV-s?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-          <div><iframe class="media-item" src="https://www.youtube.com/embed/uGU5G5j_soI?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-          <div><img class="media-item" src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/16387293_1258628007548263_5609598544495767844_n.jpg?_nc_cat=0&oh=c93f67c5e1970f76ffdd02d2c3a93c24&oe=5B71C481" /></div>
-          <div><iframe class="media-item" src="https://www.youtube.com/embed/iVpuYzLQRgA?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-          <div><iframe class="media-item" src="https://www.youtube.com/embed/sbQepwvKV-s?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-          <div><iframe class="media-item" src="https://www.youtube.com/embed/uGU5G5j_soI?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-          <div><img class="media-item" src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/16387293_1258628007548263_5609598544495767844_n.jpg?_nc_cat=0&oh=c93f67c5e1970f76ffdd02d2c3a93c24&oe=5B71C481" /></div>
-        </div>
-      </section>
+        <!-- Section C -->
+        <section id="section-c" class="grid">
+            <ul>
+                <li>
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/241456/pexels-photo-241456.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">Kraft</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolorem nam porro minus illum,
+                                illo sint deserunt, beatae aperiam obcaecati reiciendis, numquam ea totam nisi error aliquam
+                                laborum id dicta.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/12343/pexels-photo-12343.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">Beweglichkeit</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolorem nam porro minus illum,
+                                illo sint deserunt, beatae aperiam obcaecati reiciendis, numquam ea totam nisi error aliquam
+                                laborum id dicta.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/917732/pexels-photo-917732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">Ausgleich</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolorem nam porro minus illum,
+                                illo sint deserunt, beatae aperiam obcaecati reiciendis, numquam ea totam nisi error aliquam
+                                laborum id dicta.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/302155/pexels-photo-302155.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">Spaß</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolorem nam porro minus illum,
+                                illo sint deserunt, beatae aperiam obcaecati reiciendis, numquam ea totam nisi error aliquam
+                                laborum id dicta.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
-      <section id="contact">
-        <h1 class="title">Kontakt</h1>
-        <div class="contact-container">
-          
-        </div>
-      </section>
-    </div>
+        <!-- Section D -->
+        <section id="section-d" class="grid">
+            <div class="content-wrap">
+                <h2 class="content-title">Erfolge</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nam rerum vel earum error fugiat cupiditate, dolore eius! Minus, explicabo.</p>
+            </div>
+        </section>
+        
+        <!-- Section B -->
+        <section id="section-b" class="grid">
+            <div class="content-wrap">
+                <h2 class="content-title">Trainingsorte</h2>
+                <div class="content-text">
+                        <div id="sportzentrum" class="trainingsort">
+                            <h3>Regulär - Sportzentrum Halle 1</h3>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2567.560973588407!2d11.582936215713076!3d49.944578579408706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1a2d0acbc3e8d%3A0xdad906fcdc19dc82!2sOberfrankenhalle!5e0!3m2!1sde!2sde!4v1522926573626" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <div id="tennishalle" class="trainingsort">
+                            <h3>Sommer - Tennishalle</h3>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d641.9078168811204!2d11.55872794730672!3d49.94325974444725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1a2b6c484d8f7%3A0x5437abb91c666152!2sBayreuther+Turnerschaft+1861+e.V.!5e0!3m2!1sde!2sde!4v1522926741059" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="footer">
-      <p>Copyright &copy; 2018 Moritz Berthold</p>
-    </div>
-  </body>
+        <!-- Section Facebook -->
+        <section id="section-facebook" class="grid">
+            <div class="content-wrap">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FBTSTrampolin%2Fposts%2F1306588246151333&width=500" width="500" height="773" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
+        </section>
+
+        <!-- Section E -->
+        <section id="section-e" class="grid">
+            <div class="box">
+                <h2 class="content-title">Kontakt</h2>
+                <table id="contact" class="contact-table">
+                    <thead>
+                        <th>Name</th>
+                        <th>Funktion</th>
+                        <th>E-Mail</th>
+                        <th>Telefon</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bernd Meier</td>
+                            <td>Leiter</td>
+                            <td><a href="mailto:bernd.bm.meier@googlemail.com">&#9993;</a></td>
+                            <td>
+                                <a class="phone-symbol" href="tel:(09209) 91 30 40">&phone;</a>
+                                <a class="phone-number" href="tel:(09209) 91 30 40">(09209) 91 30 40</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Kathrin Meier</td>
+                            <td>Trainer</td>
+                            <td><a href="mailto:">&#9993;</a></td>
+                            <td>
+                                <a class="phone-symbol" href="tel:(09209) 91 30 40">&phone;</a>
+                                <a class="phone-number" href="tel:"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ellen Kratzer</td>
+                            <td>Trainer</td>
+                            <td><a href="mailto:">&#9993;</a></td>
+                            <td>
+                                <a class="phone-symbol" href="tel:(09209) 91 30 40">&phone;</a>
+                                <a class="phone-number" href="tel:"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Lisa Kotschi</td>
+                            <td>Trainer</td>
+                            <td><a href="mailto:">&#9993;</a></td>
+                            <td>
+                                <a class="phone-symbol" href="tel:(09209) 91 30 40">&phone;</a>
+                                <a class="phone-number" href="tel:"></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="box">
+                <h2 class="content-title">Über uns</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, fugiat optio? Maiores, esse minus aperiam sunt incidunt atque? Architecto commodi quae accusantium accusamus. Temporibus quibusdam quis, vero commodi deleniti consequatur?</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer" class="grid">
+        <div>Hauptverein
+            <a href="http://www.bayreuther-turnerschaft.de/">Bayreuther Turnerschaft 1861 e.V.</a>
+        </div>
+        <div>Project by Moritz Berthold</div>
+    </footer>
+</body>
+
 </html>
